@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Request For Transfer (RFT) System
 
 ## 📌 Overview
@@ -266,3 +267,7 @@ Author
 Mohammed
 Full Stack Developer
 Specialized in .NET, React, and ERP Systems
+=======
+# request-for-transfer-RFT-
+Full-stack Request For Transfer (RFT) system built with .NET REST APIs, React, and MS SQL Server. Supports multi-role workflow including Admin, Branch Accountant, Verifier, Approver, and Finance with vendor management, approvals, file uploads, and payment tracking across multiple branches.
+>>>>>>> 919df12a7bc177fe6fa02084e7e1d77310ab31d1
