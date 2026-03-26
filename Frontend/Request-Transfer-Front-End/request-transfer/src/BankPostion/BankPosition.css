@@ -1,0 +1,321 @@
+/* BankPosition.css */
+.bank-position-container {
+  min-height: 40vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bank-position-form-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  padding: 48px;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bank-position-form-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.bank-position-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bank-position-header img {
+  height: 70px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.bank-position-header img:hover {
+  transform: scale(1.05);
+}
+
+.bank-position-header-content {
+  flex: 1;
+}
+
+.bank-position-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.bank-position-header p {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.bank-position-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.bank-position-form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bank-position-form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bank-position-form-group input,
+.bank-position-form-group select {
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bank-position-form-group input:focus,
+.bank-position-form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1),
+    0 4px 12px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.bank-position-form-group input:hover,
+.bank-position-form-group select:hover {
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.bank-position-form-group input[readonly] {
+  background: #f8fafc;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.bank-position-submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bank-position-submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.bank-position-submit-button:hover::before {
+  left: 100%;
+}
+
+.bank-position-submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bank-position-submit-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bank-position-success-message {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-top: 24px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  animation: bankPositionSlideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bank-position-error-message {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-top: 24px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  animation: bankPositionSlideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes bankPositionSlideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced select dropdown styling */
+.bank-position-form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23666' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  padding-right: 48px;
+}
+
+/* Number input styling */
+.bank-position-form-group input[type="number"] {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.bank-position-form-group input[type="number"]::placeholder {
+  color: #9ca3af;
+  font-weight: normal;
+}
+
+/* Account number styling */
+.bank-position-account-number {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%) !important;
+  border-color: #dbeafe !important;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace !important;
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+  color: #1e40af !important;
+}
+
+/* Amount input special styling */
+.bank-position-amount-input {
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%) !important;
+  border-color: #a7f3d0 !important;
+  font-weight: 700 !important;
+  color: #065f46 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bank-position-container {
+    padding: 20px 16px;
+  }
+
+  .bank-position-form-wrapper {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .bank-position-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .bank-position-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .bank-position-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bank-position-submit-button {
+    width: 100%;
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bank-position-form-wrapper {
+    padding: 24px 20px;
+  }
+
+  .bank-position-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .bank-position-header p {
+    font-size: 0.9rem;
+  }
+
+  .bank-position-form-group input,
+  .bank-position-form-group select {
+    padding: 12px 14px;
+  }
+}
+
+/* Loading state for form */
+.bank-position-form-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Focus states for accessibility */
+.bank-position-submit-button:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.3);
+  outline-offset: 2px;
+}
+
+.bank-position-form-group input:focus,
+.bank-position-form-group select:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.1);
+  outline-offset: 0;
+}
+
+/* Bank position specific styling */
+.bank-position-highlight {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%) !important;
+  border-color: #fed7aa !important;
+  color: #9a3412 !important;
+}

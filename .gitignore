@@ -1,0 +1,13 @@
+# .NET Backend
+Backend/**/bin/
+Backend/**/obj/
+Backend/**/*.user
+Backend/**/*.vs/
+
+# React Frontend
+Frontend/node_modules/
+Frontend/build/
+Frontend/.env
+
+# VS Code
+.vscode/d

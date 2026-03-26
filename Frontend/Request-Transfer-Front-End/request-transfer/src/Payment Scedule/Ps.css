@@ -1,0 +1,162 @@
+.weekly-payments {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.payment-schedule {
+  font-weight: bold;
+  color: #666;
+}
+
+.bank-balances {
+  margin-bottom: 30px;
+}
+
+.bank-balances h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.bank-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.bank-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  min-width: 200px;
+}
+
+.bank-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bank-amount {
+  font-size: 1.2em;
+  color: #2c5aa0;
+}
+
+.branch-section {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.branch-header {
+  background: #f0f0f0;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branch-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.view-details-btn {
+  background: #2c5aa0;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.suppliers-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.suppliers-table th,
+.suppliers-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.suppliers-table th {
+  background: #f8f8f8;
+  font-weight: bold;
+}
+
+.branch-total {
+  background: #e8f4fd;
+  font-weight: bold;
+}
+
+.totals-section {
+  margin-top: 30px;
+  border-top: 2px solid #333;
+  padding-top: 15px;
+}
+
+.totals-section table {
+  width: 100%;
+}
+
+.totals-section td {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
